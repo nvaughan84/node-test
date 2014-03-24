@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  input(type="text", class="message")
+  input(type="submit", class="submit", value="send")
+  div.message_output
