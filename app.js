@@ -46,7 +46,8 @@ var io = socket.listen( server );
 
 io.sockets.on('connection', function (socket) {  
   socket.on('message', function (data) {
-  	io.sockets.emit('news', { message: data.message });
-    console.log(data);
+  	io.sockets.emit('reply', { message: data.message });
   });
 });
+
+setInterval(function() { io.sockets.emit('update'); }, 1000);
