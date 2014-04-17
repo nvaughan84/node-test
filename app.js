@@ -8,6 +8,7 @@ var routes = require('./routes');
 var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
+var freckle = require( 'freckle' );
 
 var app = express();
 var socket = require('socket.io');
@@ -51,3 +52,15 @@ io.sockets.on('connection', function (socket) {
 });
 
 setInterval(function() { io.sockets.emit('update'); }, 1000);
+
+//freckle
+// Add your own subdomain and API token information
+freckle( "thebluecube", "7pdr1nbjszdkp6cvw2gq66e48en3vqt" );
+
+freckle.users.list(function( err, users ) {
+  if( err ) {
+    throw new Error( err );
+  }
+
+  console.log( users );
+});
