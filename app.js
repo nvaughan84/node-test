@@ -46,10 +46,33 @@ var io = socket.listen( server );
 
 
 io.sockets.on('connection', function (socket) {  
+
   socket.on('message', function (data) {
   	io.sockets.emit('reply', { message: data.message });
   });
+
+  socket.on('right', function () {
+  	io.sockets.emit('animate_right');
+  });
+
+    socket.on('left', function () {
+    	console.log('left');
+  	io.sockets.emit('animate_left');
+  });
+
+   socket.on('up', function () {
+    	console.log('up');
+  	io.sockets.emit('animate_up');
+  });
+
+    socket.on('down', function () {
+    	console.log('down');
+  	io.sockets.emit('animate_down');
+  });
+
 });
+
+
 
 setInterval(function() { io.sockets.emit('update'); }, 1000);
 
@@ -63,4 +86,4 @@ freckle.users.list(function( err, users ) {
   }
 
   console.log( users );
-});
+});	
