@@ -1,7 +1,12 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: #121212;
+    background-color:#222;
+  background-image:-webkit-radial-gradient(50% 50%,#333,#111);
+  background-image:-moz-radial-gradient(50% 50%,#333,#111);
+  background-image:-ms-radial-gradient(50% 50%,#333,#111);
+  background-image:-o-radial-gradient(50% 50%,#333,#111);
+  background-image:radial-gradient(50% 50%,#333,#111);
   color: #FFF;
 }
 
@@ -13,9 +18,15 @@ a {
 {
 	width: 20%;
 	margin: 5%;
-	border: 1px solid #FFF;
+	border: 1px solid #383838;
 	float: left;
 	text-align: center;
+	  background-color:#222;
+  background-image:-webkit-radial-gradient(50% 50%,#333,#111);
+  background-image:-moz-radial-gradient(50% 50%,#333,#111);
+  background-image:-ms-radial-gradient(50% 50%,#333,#111);
+  background-image:-o-radial-gradient(50% 50%,#333,#111);
+  background-image:radial-gradient(50% 50%,#333,#111);
 }
 
 .box.large
