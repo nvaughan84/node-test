@@ -99,6 +99,7 @@ io.sockets.on('connection', function (socket) {
     twit.stream('user', {track:'nvaughan84'}, function(stream) {
     stream.on('data', function (data) {
       socket.emit('tweet', { message: data });
+      console.log(data);
     });
   });
 });
@@ -131,6 +132,7 @@ io.sockets.on('connection', function (socket) {
   twit.get('/statuses/user_timeline.json', {count: 3}, function(err, item) {
       
     socket.emit('tweet_init', { message: item });
+    console.log(item);
       });
     });
 
