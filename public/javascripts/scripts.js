@@ -67,7 +67,12 @@
 					project = $('<p/>', 
 					{
 						class: 'project'
-					}).text(value.project.name+' - '+value.project.billable_minutes/60 +' of '+ value.project.budget_minutes/60+' hours ('+percent_complete+'%) ');
+					}).text(value.project.name+' ('+value.project.billable_minutes/60 +' of '+ value.project.budget_minutes/60+' hours)');
+
+					complete_bar = $('<div class="meter orange nostripes"><span style="width: '+percent_complete+'%"></span></div>');
+					project.append(complete_bar);
+					
+
 					if(value.project.budget_minutes>0)$('.project_list').append(project);
 				});
 
