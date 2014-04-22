@@ -1,0 +1,54 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #121212;
+  color: #FFF;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.box
+{
+	width: 20%;
+	margin: 5%;
+	border: 1px solid #FFF;
+	float: left;
+	text-align: center;
+}
+
+.box.large
+{
+	width: 35%
+}
+
+.box.full
+{
+	width: 90%
+}
+
+.tweets
+{
+	background: rgb(34, 32, 32);
+	padding: 10px;
+}
+
+.tweets p
+{
+
+	border-top: 1px solid #CECECE;
+	text-align: left;
+}
+
+.tweets .created_at
+{
+	font-size: 0.7em;
+	text-align: right;
+}
+
+.project_list
+{
+	padding: 0 15px;
+	text-align: left
+}

@@ -1,11 +1,56 @@
- var socket = io.connect('http://10.88.88.111');
+ //var socket = io.connect('http://10.88.88.111');
+ var socket = io.connect('http://192.168.0.6');
  var count = 0;
   /*socket.on('news', function (data) {
     console.log(data);
     socket.emit('my other event', { my: 'data' });
   });*/
 
-	
+ 	socket.on('tweet_init', function(data)
+ 		{
+ 			console.log(data);
+ 		});
+
+
+	socket.on('tweet', function(data)
+	{
+		if($('.tweets p').length > 2)
+		{
+			$('.tweets p:last-child').remove();
+		}
+		
+			created_time = $('<div/>', 
+			{
+			    class: 'created_at'
+			}).text(data.message.user.created_at);
+
+			message = $("<p/>",
+				{
+					style: 'display: none'
+				}).text(data.message.text).fadeIn().slideDown();
+			message.append(created_time);
+			$('.tweets').prepend(message);
+			
+			//console.log(data.message.text);
+	})
+
+	//LIST FRECKLE PROJECTS
+	socket.on('freckle', function(data)
+		{
+			console.log('loaded freckle');
+			$('.project_list').empty();
+			$.each(data.message, function(index, value)
+				{
+					console.log(value.project);
+					console.log(value.project.name);
+					project = $('<p/>', 
+					{
+						class: 'project'
+					}).text(value.project.name+' ('+value.project.budget_minutes+' minutes) ');
+					$('.project_list').append(project);
+				});
+
+		});
 
 
 $(document).on('click', function()
