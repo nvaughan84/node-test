@@ -16,5 +16,5 @@ exports.controller = function(req, res){
 };
 
 exports.dashboard = function(req, res){
-  res.render('dashboard', { title: 'DashBoard' });
+  res.render('dashboard', { title: 'The Blue Cube' });
 };

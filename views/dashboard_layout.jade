@@ -3,8 +3,17 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/styles.css')
+    link(rel='stylesheet', href='/stylesheets/flipclock.css')
     script(src='../socket.io/socket.io.js')
     script(src="http://code.jquery.com/jquery-1.11.0.min.js")
+    script(src='/javascripts/flipclock/libs/base.js')
+    script(src='/javascripts/flipclock/flipclock.js')
+    script(src='/javascripts/flipclock/faces/counter.js')
+    script(src='/javascripts/flipclock/faces/hourlycounter.js')
+    script(src='/javascripts/flipclock/faces/dailycounter.js')
+    script(src='/javascripts/flipclock/faces/minutecounter.js')
+    script(src='/javascripts/flipclock/faces/twentyfourhourclock.js')
+    script(src='/javascripts/flipclock/faces/twelvehourclock.js')    
     script(src='/javascripts/scripts.js')
   body
     block content

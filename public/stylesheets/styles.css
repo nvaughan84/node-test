@@ -1,8 +1,9 @@
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,300);
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-	background: rgba(82,82,82,1);
-  color: #FFF;
+  	padding: 50px;
+  	font-family: 'Titillium Web', 'sans-serif';
+	background: #2b2b2b;
+  	color: #FFF;
 }
 
 a {
@@ -12,16 +13,11 @@ a {
 .box
 {
 	width: 20%;
-	margin: 5%;
+	margin: 1% 5%;
 	border: 1px solid #383838;
 	float: left;
 	text-align: center;
-	  background-color:#222;
-  background-image:-webkit-radial-gradient(50% 50%,#333,#111);
-  background-image:-moz-radial-gradient(50% 50%,#333,#111);
-  background-image:-ms-radial-gradient(50% 50%,#333,#111);
-  background-image:-o-radial-gradient(50% 50%,#333,#111);
-  background-image:radial-gradient(50% 50%,#333,#111);
+	background-color:#222;
 }
 
 .box.large
@@ -56,7 +52,12 @@ a {
 .project_list
 {
 	padding: 0 15px;
-	text-align: left
+	text-align: center
+}
+
+.center
+{
+	text-align: center;
 }
 
 /*
@@ -67,10 +68,10 @@ PROGRESS background-size:
 	height: 20px;  /* Can be anything */
 	position: relative;
 	background: #555;
-	-moz-border-radius: 25px;
-	-webkit-border-radius: 25px;
-	border-radius: 25px;
-	padding: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	padding: 1px;
 	-webkit-box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
 	-moz-box-shadow   : inset 0 -1px 1px rgba(255,255,255,0.3);
 	box-shadow        : inset 0 -1px 1px rgba(255,255,255,0.3);

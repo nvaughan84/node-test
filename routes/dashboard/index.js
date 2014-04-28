@@ -4,6 +4,6 @@
  */
 
 exports.dashboard = function(req, res){
-  res.render('dashboard', { title: 'Game' });
+  res.render('dashboard', { title: 'The Blue Cube' });
 };
 

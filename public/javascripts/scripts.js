@@ -1,5 +1,5 @@
- var socket = io.connect('http://10.88.88.111');
- //var socket = io.connect('http://192.168.0.6');
+ //var socket = io.connect('http://10.88.88.111');
+ var socket = io.connect('http://192.168.0.6');
  var count = 0;
   /*socket.on('news', function (data) {
     console.log(data);
@@ -159,7 +159,9 @@ $(document).on('click', function()
 
 	$(document).ready(function()
 		{
-			
+			clock = $('.clock').FlipClock({
+					clockFace: 'TwentyFourHourClock'
+				});
 		});
 
 
